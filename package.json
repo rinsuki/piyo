@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "tsc"
+  },
   "files": [
     "lib"
   ],
