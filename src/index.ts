@@ -32,3 +32,7 @@ export class App<StateT = any, CustomT = {}> extends Router<StateT, CustomT> {
         return this.koa.listen(...args)
     }
 }
+
+export type ContextFromRouter<R extends Router<any, any>, AdditionalState = {}, AdditionalCustom = {}> = R extends Router<infer State, infer Custom>
+    ? KoaRouter.RouterContext<State & AdditionalState, Custom & AdditionalCustom>
+    : never
