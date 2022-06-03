@@ -1,4 +1,4 @@
-import KoaRouter = require("koa-router")
+import KoaRouter = require("@koa/router")
 import KoaApp = require("koa")
 
 export class Router<StateT = {}, CustomT = {}> extends KoaRouter<StateT, CustomT> {
